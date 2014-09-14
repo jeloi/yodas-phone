@@ -22,7 +22,7 @@ router.post('/texts', function(req, res) {
 	    res.send(twiml.toString());
 	}
 	else {
-	    res.send('you are not twilio.  Buzz off.');
+	    res.send('Hey! You are not twilio.  Buzz off.');
 	}
 })
 
