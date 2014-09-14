@@ -19,13 +19,13 @@ router.post('/texts', function(req, res) {
 	    twiml.message('express sez - hello twilio!');
 
 	    // The text sent in
-	    var body = request.param('Body').trim();
+	    var body = req.param('Body').trim();
         
         // the number the vote it being sent to (this should match an Event)
-        var to = request.param('To');
+        var to = req.param('To');
         
         // the voter, use this to keep people from voting more than once
-        var from = request.param('From');
+        var from = req.param('From');
 
 	    res.type('text/xml');
 	    res.send(twiml.toString());
