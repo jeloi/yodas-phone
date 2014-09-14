@@ -14,16 +14,16 @@ router.get('/', function(req, res) {
 });
 
 router.post('/texts', function(req, res) {
-	if (twilio.validateExpressRequest(req, config.twilio.authToken)) {
+	// if (twilio.validateExpressRequest(req, config.twilio.authToken)) {
 	    var twiml = new twilio.TwimlResponse();
-	    twiml.say('express sez - hello twilio!');
+	    twiml.message('express sez - hello twilio!');
 
 	    res.type('text/xml');
 	    res.send(twiml.toString());
-	}
-	else {
-	    res.send('Hey! You are not twilio.  Buzz off.');
-	}
+	// }
+	// else {
+	//     res.send('Hey! You are not twilio.  Buzz off.');
+	// }
 })
 
 module.exports = router;
