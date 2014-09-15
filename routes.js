@@ -3,6 +3,9 @@ var express = require('express');
 var router = express.Router();
 var twilio = require('twilio');
 var https = require('https');
+var moment = require('moment');
+var _ = require('underscore');
+
 var YodaSpeak = require('yoda-speak');
 
 // App config
@@ -12,10 +15,20 @@ var client = new twilio.RestClient(config.twilio.accountSid, config.twilio.authT
 // Yoda client from Mashape API
 var yoda = new YodaSpeak(config.mashape.apiKey);
 
-/* GET home page. */
-// router.get('/', function(req, res) {
-//   res.render('index', { title: 'Express' });
-// });
+// Get incoming message history, limited to last 30 in the last 2 days
+router.get('/history', function(req, res) {
+	if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {
+		var twoDaysAgo = moment().subtract(2, 'days').format("YYYY-MM-DD");
+		console.log(twoDaysAgo);
+		client.messages.list({"DateSent>": twoDaysAgo, To: config.twilio.to}, function(err, data) {
+			var list = _.first(data.messages, 30);
+		    res.send(list);
+		});
+	}
+	else {
+	    res.send('Hey! You are not twilio.  Buzz off.');
+	}
+})
 
 router.post('/texts', function(req, res) {
 	if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {
