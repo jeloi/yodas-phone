@@ -13,9 +13,9 @@ var client = new twilio.RestClient(config.twilio.accountSid, config.twilio.authT
 var yoda = new YodaSpeak(config.mashape.apiKey);
 
 /* GET home page. */
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
-});1
+// router.get('/', function(req, res) {
+//   res.render('index', { title: 'Express' });
+// });
 
 router.post('/texts', function(req, res) {
 	if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {

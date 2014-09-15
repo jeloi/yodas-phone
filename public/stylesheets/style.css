@@ -1,8 +1,26 @@
+/* Mobile-First Styles */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 2em;
 }
 
 a {
-  color: #00B7FF;
+	color: #00B7FF;
+}
+
+.hero {
+	background: #7ac274;
+	color: white;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 650px) {
+	body {
+		font-size: 14px;
+	}
 }
