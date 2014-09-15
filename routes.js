@@ -27,9 +27,10 @@ router.post('/texts', function(req, res) {
 	    yoda.convert(body, function(err, result) {
 	    	if (!err) {
 	    		console.log(result.toString());
-	    		twiml.message = result.toString();
+	    		// twiml.message = result.toString();
+	    		twiml.message = "this is how we liveeee"
 	    		res.type('text/xml');
-	    		res.end(twiml.toString());
+	    		res.send(twiml.message.toString());
 	    	} else {
 	    		res.status(err.status || 500);
 	    		res.render('error', {
