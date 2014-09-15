@@ -21,7 +21,6 @@
 10 error There is likely additional logging output above.
 11 error System Darwin 13.3.0
 12 error command "/Users/jeloi/.nvm/v0.10.31/bin/node" "/Users/jeloi/.nvm/v0.10.31/bin/npm" "start"
-13 error cwd /Users/jeloi/Code/projects/yoda-speak-text
 14 error node -v v0.10.31
 15 error npm -v 1.4.23
 16 error code ELIFECYCLE
