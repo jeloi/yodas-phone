@@ -1,26 +1,76 @@
 /* Mobile-First Styles */
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font: 25px "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
+	text-align: center;
+	/*color: #3D3D3D;*/
+	color: white;
+	background: #2D2D2D;
+	height: 100%;
 }
 
-h1 {
-	font-size: 2em;
+@font-face {
+    font-family: 'star_jediregular';
+    src: url('starjedi-webfont.eot');
+    src: url('starjedi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('starjedi-webfont.woff2') format('woff2'),
+         url('starjedi-webfont.woff') format('woff'),
+         url('starjedi-webfont.ttf') format('truetype'),
+         url('starjedi-webfont.svg#star_jediregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 a {
 	color: #00B7FF;
+	text-decoration: none;
 }
 
 .hero {
 	background: #7ac274;
 	color: white;
+	height: 400px;
+}
+
+.header {
+	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 2em;
+	margin: 0.2em 0;
+}
+
+.yoda {
+	padding-top: 50px;
+	width: 150px;
+}
+
+.directions {
+	padding: 0 10px;
+}
+
+.number {
+	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+.footer {
+	font-size: 0.7em;
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 650px) {
 	body {
-		font-size: 14px;
+		font-size: 27px;
 	}
+	.header {
+		font-size: 2em;
+		margin: 0.2em 0;
+	}
+
 }
+
