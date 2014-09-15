@@ -15,7 +15,7 @@ var yoda = new YodaSpeak(config.mashape.apiKey);
 /* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
-});
+});1
 
 router.post('/texts', function(req, res) {
 	if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {
@@ -29,7 +29,7 @@ router.post('/texts', function(req, res) {
 	    		console.log(result.toString());
 	    		twiml.message = result.toString();
 	    		res.type('text/xml');
-	    		res.send(twiml.toString());
+	    		res.end(twiml.toString());
 	    	} else {
 	    		res.status(err.status || 500);
 	    		res.render('error', {
