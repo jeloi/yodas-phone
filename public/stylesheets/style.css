@@ -40,8 +40,9 @@ a {
 
 .header {
 	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
-	font-size: 2em;
+	font-size: 1.8em;
 	margin: 0.2em 0;
+	line-height: 1;
 }
 
 .yoda {
@@ -57,6 +58,14 @@ a {
 	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-size: 1em;
 }
+
+	.number span {
+		font: 40px "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
+		top: 5px;
+		position: relative;
+		font-weight: bold;
+		margin-right: 4px;
+	}
 
 .footer {
 	font-size: 0.7em;
