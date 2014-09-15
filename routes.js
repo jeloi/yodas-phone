@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
 });1
 
 router.post('/texts', function(req, res) {
-	if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {
+	// if (twilio.validateExpressRequest(req, config.twilio.authToken, {url: config.twilio.smsWebhook})) {
 	    var twiml = new twilio.TwimlResponse();
 
 	    // The text sent in
@@ -40,10 +40,10 @@ router.post('/texts', function(req, res) {
 	    })
         // var to = req.param('To');
         // var from = req.param('From');
-	}
-	else {
-	    res.send('Hey! You are not twilio.  Buzz off.');
-	}
+	// }
+	// else {
+	//     res.send('Hey! You are not twilio.  Buzz off.');
+	// }
 })
 
 module.exports = router;
