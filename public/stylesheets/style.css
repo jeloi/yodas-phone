@@ -8,9 +8,9 @@ body {
 	padding: 0;
 	font: 25px "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
 	text-align: center;
-	/*color: #3D3D3D;*/
-	color: white;
-	background: #2D2D2D;
+	color: #555;
+	/*color: white;*/
+	/*background: #2D2D2D;*/
 	height: 100%;
 }
 
@@ -27,14 +27,21 @@ body {
 
 }
 
-a {
-	color: #A8DFF5;
+a, a:visited {
+	/*color: #78BEFF;*/
+	color: #a7d7a3;
 	text-decoration: none;
+	-webkit-transition: opacity 0.2s ease;
+	-o-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
 }
+	a:hover {
+		opacity: 0.8;
+	}
 
 .hero {
-	background: #7ac274;
-	color: white;
+	/*background: #7ac274;*/
+	/*color: white;*/
 	height: 320px;
 }
 
@@ -43,7 +50,8 @@ a {
 	font-size: 1.8em;
 	margin: 0.2em 0;
 	line-height: 1;
-	color: #ffec09;
+	color: #555;
+	/*color: #ffec09;*/
 }
 
 .yoda {
@@ -69,17 +77,11 @@ a {
 	}
 
 /* Recent Texts Container */
-a#recent {
+a#reveal {
 	cursor: pointer;
 }
-	a#recent:hover {
-		color: 0.8;
-		-webkit-transition: color 0.2s;
-		-o-transition: color 0.2s;
-		transition: color 0.2s;
-	}
 
-#container li {
+#recent li {
 	font-size: 0.8em;
 	list-style: none;
 	margin: 15px;
@@ -116,9 +118,13 @@ span.twitter {
 /* Footer: Build by Jeloi */
 .footer {
 	margin-top: 1em;
-	margin-bottom: 1em;
+	padding-bottom: 1em;
 	font-size: 0.7em;
 }
+
+	.footer a {
+		color: #777;
+	}
 
 .hidden	{
 	display: none;

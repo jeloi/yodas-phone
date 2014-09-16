@@ -5,14 +5,13 @@ $(document).ready(function() {
 		// $('.bottom').removeClass('hidden').addClass('animated fadeIn')
 	});
 
-	$('body').on('click', '#recent', function(event) {
+	$('body').on('click', '#reveal', function(event) {
 		event.preventDefault();
 		if (!recentsLoaded) {
 			$.get('/history', function(data) {
-				console.log(data);
 				$.each(data, function(index, val) {
 					var html = "<li>\"" + val.body + "\"</li>";
-					$('#container').append(html)
+					$('#recent').append(html)
 				});
 				recentsLoaded = true;
 				$('#container').removeClass('hidden');
