@@ -28,14 +28,14 @@ body {
 }
 
 a {
-	color: #00B7FF;
+	color: #A8DFF5;
 	text-decoration: none;
 }
 
 .hero {
 	background: #7ac274;
 	color: white;
-	height: 400px;
+	height: 320px;
 }
 
 .header {
@@ -57,6 +57,7 @@ a {
 .number {
 	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-size: 1em;
+	color: #A8DFF5;
 }
 
 	.number span {
@@ -99,10 +100,17 @@ span.twitter {
 	font-size: 0.7em;
 }
 
+.hidden	{
+	display: none;
+}
+
 /* Desktop Styles */
 @media only screen and (min-width: 650px) {
 	body {
 		font-size: 27px;
+	}
+	.yoda {
+		width: 150px;
 	}
 	.header {
 		font-size: 2em;
