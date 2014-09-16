@@ -43,6 +43,7 @@ a {
 	font-size: 1.8em;
 	margin: 0.2em 0;
 	line-height: 1;
+	color: #ffec09;
 }
 
 .yoda {
@@ -57,7 +58,6 @@ a {
 .number {
 	font-family: 'star_jediregular', "alternate-gothic-no-3-d", "Lucida Grande", Helvetica, Arial, sans-serif;
 	font-size: 1em;
-	color: #A8DFF5;
 }
 
 	.number span {
@@ -68,7 +68,31 @@ a {
 		margin-right: 4px;
 	}
 
+/* Recent Texts Container */
+a#recent {
+	cursor: pointer;
+}
+	a#recent:hover {
+		color: 0.8;
+		-webkit-transition: color 0.2s;
+		-o-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+
+#container li {
+	font-size: 0.8em;
+	list-style: none;
+	margin: 15px;
+}
+
+
 /* Share Links */
+.share-links{
+	text-align: center;
+	margin-top: 20px;
+	padding-left: 30px;
+}
+
 span.github {
 	position: relative;
 	display: inline-block;
@@ -88,15 +112,11 @@ span.twitter {
 	top: 5px;
 }
 
-.share-links{
-	text-align: center;
-	margin-top: 20px;
-	padding-left: 30px;
-}
 
 /* Footer: Build by Jeloi */
 .footer {
 	margin-top: 1em;
+	margin-bottom: 1em;
 	font-size: 0.7em;
 }
 
