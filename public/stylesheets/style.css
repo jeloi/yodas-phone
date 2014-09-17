@@ -108,6 +108,12 @@ span.facebook {
 	top: -5px;
 }
 
+span.twitter-follow {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+}
+
 span.twitter {
 	display: inline-block;
 	position: relative;
@@ -118,7 +124,7 @@ span.twitter {
 /* Footer: Build by Jeloi */
 .footer {
 	margin-top: 1em;
-	padding-bottom: 1em;
+	padding-bottom: 3em;
 	font-size: 0.7em;
 }
 
