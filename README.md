@@ -19,7 +19,7 @@ Here are some [tips](https://www.mashape.com/ismaelc/yoda-speak/overview) for me
 "Really happy for you, am I, and going to let you finish, I am, but the best phone line of all time, this is. Herh herh herh."
 
 ## Author
-[Jeloi](jeremyho.co/about)
+[Jeloi](http://jeremyho.co/about)
 
 ## License
 MIT
