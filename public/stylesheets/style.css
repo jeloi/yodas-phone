@@ -79,6 +79,7 @@ a, a:visited {
 /* Recent Texts Container */
 a#reveal {
 	cursor: pointer;
+	padding-bottom: 40px;
 }
 
 #recent li {
