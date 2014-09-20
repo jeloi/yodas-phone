@@ -20,9 +20,8 @@ var yoda = new YodaSpeak(config.mashape.apiKey);
 
 // Get incoming message history, limited to last 20 in the last 2 days
 router.get('/history', function(req, res) {
-	var twoDaysAgo = moment().subtract(2, 'days').format("YYYY-MM-DD");
-	console.log(twoDaysAgo);
-	client.messages.list({"DateSent>": twoDaysAgo, From: config.twilio.to}, function(err, data) {
+	// var twoDaysAgo = moment().subtract(2, 'days').format("YYYY-MM-DD");
+	client.messages.list({From: config.twilio.to}, function(err, data) {
 		var list = _.first(data.messages, 20);
 		list = _.map(list, function(text) {
 			return {body: text.body}
